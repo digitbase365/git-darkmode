@@ -297,12 +297,8 @@ header .notification i{
 }
 .git-updates .content .stats > div{
     display: flex;
-    align-items: center;
-    width: 50%; 
-}  
-.git-updates .star{ 
-    width: 15%;
-}
+    align-items: center;  
+}   
 .git-updates .date.issue{
     margin: 0 12px;
     margin-left: 5px;
@@ -366,27 +362,30 @@ header .notification i{
     object-fit: cover;
 } 
 .explore .explore-more h4{
-    margin: 22px 0;
+    margin: 22px 0 2px;
 }
 .explore-more > div{
     height: 80px;
     border-bottom: var(--btm-border);
 }
+.explore-more .code-stars{ 
+    height: auto;
+}
 .explore-more .code-stars h5{
     font-size: 1.3rem;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .explore-more .code-stars p{
-    margin: 7px 0;
+    margin: 4px 0;
 }
 .code-stars > div{
     display: flex; 
 }
 .lang, .star{ 
-    width: 22%;
+    width: 62px;
     height: 30px;   
     display: flex; 
-    align-items: center;
+    align-items: center; 
 }
 .purple{
     width: 9px;
