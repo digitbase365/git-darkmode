@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+    --section-padding: 78px;
+    --section-top-padding: 50px;
+    --light-black: #1f2123;
+    --dark-black: #121212;
+    --pri-font-color: #e0dede;
+    --pri-font-color: rgb(245, 243, 243);
+    --btm-border: 1px solid rgb(212, 212, 219);
+}
+p{
+    font-size: 1.2rem;  
+    line-height: 20px;
+}
+a{
+    text-decoration: none;
+    color: var(--pri-font-color);
+}
+body{
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: var(--pri-font-color);
+    background-color: #000;
+}
+
+main{
+    background-color: #1f2123;
+    background-color: #272829; 
+    background-color: var(--light-black);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 3fr 1.5fr;
+    grid-template-areas: 
+    "header header header"
+    "repositories collaboration explore"
+    ;
+    /* margin: 0 80px; */
+}
+/* Rulset for Header */
+main > header{
+    grid-area: header; 
+    background-color: #1b1d20;
+    height: 7.5vh;
+    padding-left: var(--section-padding);
+    padding-right: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+} 
+header .jumper{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .notification{
+    width: 20%;
+    height: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    color: #e7e7e7;
+}
+header .jumper .brand{
+    width: 40px;
+    height: 40px; 
+    border-radius: 50%;
+}
+header .jumper .search{ 
+    width: 38%; 
+    height: 32px;
+    margin: 0 20px;
+    padding: 0 7px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #727373;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #2e3031;
+
+}
+.jumper .search span{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #727373;
+    border-radius: 3px;
+    margin-right: 7px;
+    display: grid;
+    place-items: center;
+
+}
+.fa-slash{
+    transform: rotate(80deg);  
+}
+
+header .jumper  > nav {
+    width: 330px;
+    height: 100%; 
+}
+header nav ul{
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    font-weight: 600;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} 
+header .notification > div{ 
+    width: 69px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.notification .bell::after{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+}
+header .notification i{
+    margin-left: 7px;
+}
+.fa-caret-down{
+    font-size: 1.25rem;
+}
+.notification .profile img,
+.profile-name img{
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
+}
+/* End of Rulset for Header */
+
+/* Rulset for Repositories */ 
+.repositories{
+    grid-area: repositories; 
+    height: 92.5vh; 
+    padding-left: var(--section-padding);
+    padding-right: 50px;
+}
+.repositories .profile-name{
+    height: 8%;
+    display: flex;
+    align-items: center;
+}
+.repositories .profile-name h4{
+    margin-left: 10px;
+    margin-right: 7px;
+    font-size: 1.3rem;
+}
+.repositories .profile-name span i{
+    font-size: .9rem;
+}
+.repositories .repos{
+    height: 55%;
+    border-bottom: var(--btm-border);
+    border-top: var(--btm-border);
+    padding-bottom: 35px;
+}
+.repositories .teams{
+    height: 20%;
+}
+.repositories .teams h2{
+    font-size: 1.8rem;
+    margin: 30px 0 12px;
+} 
+.repos .new-repo{
+    height: 13%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 12px 0 5px;
+}
+.new-repo a{
+    background-color: rgb(14, 168, 84);
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem; 
+} 
+.new-repo .new{
+    margin: 0 12px 0 5px;
+}
+.repos .find-repo{
+    height: 6%; 
+    border: var(--btm-border); 
+    border-radius: 3px;
+}
+.find-repo input{
+    background-color: transparent;
+    border: none;
+    color: var(--pri-font-color);
+    padding: 3px 10px;
+    font-size: 1.1rem;
+}
+.repos ul{
+    height: 60%;
+    list-style: none;  
+    margin-bottom: 35px;
+}
+.repos p{
+    height: 5%;   
+}
+.repos ul li{
+    display: flex;
+    font-size: 1.2rem;
+    color: dodgerblue;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.repos ul li span{
+    color: goldenrod;
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+.repos span.tab{
+    color: #fff;
+}
+/* End of Rulset for Repositories */ 
+
+/* Rulset for Collaboration */ 
+
+.collaboration{
+    grid-area: collaboration;
+    height: 92.5vh; 
+    overflow: hidden;
+    background-color: var(--dark-black);
+}
+.collaboration .git-updates{ 
+    height: 100%;
+    margin: 40px 78px 0;
+}
+.git-updates .update{
+    height: 22vh;
+    border-bottom: var(--btm-border);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+ 
+.git-updates header{
+    height: 35px; 
+    display: flex;
+    align-items: center;
+}
+.git-updates header img{
+    width: 30px;
+    border-radius: 50%;
+}
+.git-updates header p{
+    margin: 0px 10px;
+    font-weight: 550;
+}
+.git-updates header span{
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+.git-updates .content{
+    height: calc(100% - 35px);
+    margin-left: 45px; 
+    background-color: var(--light-black);
+    border-radius: 4px;
+    padding: 10px 12px;
+}
+.git-updates .content .headline{
+    display: flex;
+    justify-content: space-between;
+}
+.git-updates .headline span{
+    border: var(--btm-border);
+    padding: 4px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.git-updates .headline h4{
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+.git-updates .content .highlight{
+    margin: 5px 100px 10px 0;
+    font-size: 1.12rem;
+}
+.git-updates .content .stats > div{
+    display: flex;
+    align-items: center;
+    width: 50%; 
+}  
+.git-updates .star{ 
+    width: 15%;
+}
+.git-updates .date.issue{
+    margin: 0 12px;
+    margin-left: 5px;
+}
+
+
+/* ENd of Rulset for Collaboration */ 
+
+/* Rulset for Explore */ 
+.explore{
+    grid-area: explore;
+    height: 92.5vh; 
+    padding-right: var(--section-padding);
+    padding-top: var(--section-top-padding);
+    background-color: var(--dark-black);
+    color: var(--pri-font-color);
+}
+.explore .git-mobile{
+    width: 100%;
+    height: 150px;
+    background-color: var(--light-black); 
+    border-radius: 5px; 
+    padding: 10px;
+}
+.explore header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.explore h4, .profile-name h4{
+    font-size: 1.5rem; 
+} 
+.explore .appstore{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.explore .appstore > div{ 
+    width: 43.5%; 
+    height: 35px; 
+}
+.explore .appstore .apple{
+    border: 1px solid rgba(241, 241, 236, .5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 4px 7px;
+    background-color: var(--dark-black);
+}
+.appstore .apple > div{ 
+    width: 19%;
+    height: 100%;
+}
+.appstore .apple .download{
+    width: 70%;
+    text-align: left;
+}
+.appstore img{
+    object-fit: cover;
+} 
+.explore .explore-more h4{
+    margin: 22px 0;
+}
+.explore-more > div{
+    height: 80px;
+    border-bottom: var(--btm-border);
+}
+.explore-more .code-stars h5{
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+.explore-more .code-stars p{
+    margin: 7px 0;
+}
+.code-stars > div{
+    display: flex; 
+}
+.lang, .star{ 
+    width: 22%;
+    height: 30px;   
+    display: flex; 
+    align-items: center;
+}
+.purple{
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: royalblue;
+    margin-right: 7px;
+}
+.red{
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgb(225, 65, 65);
+    margin-right: 7px;
+}
+.explore-more > div:last-of-type{
+    border: none;
+} 
+.code-stars.last{
+    border: none;
+    height: 50px;
+}
+.explore-more .exp{
+    display: flex;
+    align-items: center;
+}
+.explore-more .exp span{
+    margin-left: 10px;
+    margin-top: 3px; 
+}
+.code-stars i, .stats i{
+    margin-right: 5px;
+}
+.code-stars span{
+    font-size: 1.2rem;
+}
+
+/* End of Rulset for Explore */ 
