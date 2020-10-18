@@ -337,7 +337,7 @@ header .notification i{
     margin: 15px 0;
 }
 .explore .appstore > div{ 
-    width: 43.5%; 
+    width: 105px; 
     height: 35px; 
 }
 .explore .appstore .apple{
@@ -347,20 +347,34 @@ header .notification i{
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    padding: 4px 7px;
+    padding: 4px 3px;
     background-color: var(--dark-black);
+    height: 30px; 
 }
-.appstore .apple > div{ 
-    width: 19%;
+.appstore .apple > div{  
     height: 100%;
 }
 .appstore .apple .download{
-    width: 70%;
+    width: 100%;
     text-align: left;
+}
+.apple .download img:first-of-type{
+    width: 60px;
+}
+.apple .download img:last-of-type{
+    width: 62px;
+    /* margin-left: 10px; */
 }
 .appstore img{
     object-fit: cover;
 } 
+.appstore .apple .apple-logo{
+    width: 10px;
+    margin-right: 12px; 
+}
+.appstore .android img{
+    width: 100%;
+}
 .explore .explore-more h4{
     margin: 22px 0 2px;
 }
@@ -426,3 +440,8 @@ header .notification i{
 }
 
 /* End of Rulset for Explore */ 
+
+
+/* MEDIA QUERIES */
+ 
+/* END OF MEDIA QUERIES */
