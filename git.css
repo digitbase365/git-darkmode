@@ -443,5 +443,9 @@ header .notification i{
 
 
 /* MEDIA QUERIES */
- 
+ @media screen and (min-width: 1300px){
+    main{
+        margin: 0 78px;
+    }
+ }
 /* END OF MEDIA QUERIES */
